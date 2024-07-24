@@ -1,5 +1,10 @@
 package unitTest;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tickets.CalculateTicket;
@@ -33,6 +38,23 @@ public class UnitTestTickets {
         Assert.assertEquals(price, 320.0);
     }
 
+
+    //Move later
+    @Test
+    public void searchInUdemy() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.udemy.com");
+
+        WebElement searchField = driver.findElement(By.xpath("//*[@name='q']"));
+        searchField.sendKeys("Java");
+        searchField.sendKeys(Keys.ENTER);
+
+
+        Thread.sleep(5000);
+        driver.quit();
+
+    }
 }
 
 

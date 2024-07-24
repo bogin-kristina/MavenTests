@@ -1,5 +1,8 @@
 package tickets;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 public class CalculateTicket {
     private double basePrice;
     private int age;
@@ -22,4 +25,5 @@ public class CalculateTicket {
         }
         return basePrice;
     }
+
 }
