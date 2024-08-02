@@ -38,7 +38,7 @@ public class UnitTestTickets {
         Assert.assertEquals(price, 320.0);
     }
 
-    
+
 }
 
 
