@@ -38,23 +38,7 @@ public class UnitTestTickets {
         Assert.assertEquals(price, 320.0);
     }
 
-
-    //Move later
-    @Test
-    public void searchInUdemy() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.udemy.com");
-
-        WebElement searchField = driver.findElement(By.xpath("//*[@name='q']"));
-        searchField.sendKeys("Java");
-        searchField.sendKeys(Keys.ENTER);
-
-
-        Thread.sleep(5000);
-        driver.quit();
-
-    }
+    
 }
 
 
